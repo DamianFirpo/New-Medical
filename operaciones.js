@@ -1,9 +1,24 @@
 
+//FUNCION
+
+let nombreIngresado = prompt ('Ingrese su nombre por favor')
+
+function solicitarNombre () {   
+    alert ("Bienvenido/a " + "" + nombreIngresado)
+    return "Bienvenido/a " + "" + nombreIngresado;
+}
+
+solicitarNombre();
+
+//CONDICION FOR 'DESDE'
+
 for (let i = 9 ; i <= 19; i++) {
-    let ingresarNombre = prompt ('Ingresar nombre');
-    alert (" Horario del turno: " + i + "hs." +  " Nombre: "  + ingresarNombre);
+    let ingreseEdad = prompt ('Ingrese su edad por favor');
+    alert (" Horario del turno: " + i + "hs." + " Edad: " + ingreseEdad + " Nombre: " + nombreIngresado );
     break;
 }
+
+//CONDICION IF
 
 
 let pregunta = prompt ('Es tu primera vez en nuestra web?');

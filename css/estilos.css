@@ -300,7 +300,20 @@ body {
   padding: 5rem 0 10rem 0;
 }
 
+#contacto {
+  padding: 5rem 0 10rem 0;
+}
+
 #contact h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #555;
+}
+
+#contacto h2 {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 400;
@@ -475,6 +488,11 @@ body {
 /* ........ Contact Us........... */
 
 #contact {
+  padding: 1rem 0;
+  background: rgb(226, 226, 226);
+}
+
+#contacto {
   padding: 1rem 0;
   background: rgb(226, 226, 226);
 }
