@@ -24,7 +24,7 @@ for (let i = 9 ; i <= 19; i++) {
     let pregunta = prompt ('Es tu primera vez en nuestra web?');
 
 
-    if (pregunta === 'Si' || pregunta === 'sI' || pregunta === 'SI' || pregunta === 'si' )  {
+    if (pregunta.toUpperCase() === 'SI')  {
         alert ('Bienvenido/a a New Medical!');
     }
 
@@ -32,14 +32,14 @@ for (let i = 9 ; i <= 19; i++) {
     //PRIMERA VEZ?
     
     
-    else if (pregunta === 'No' || pregunta === 'no' || pregunta === 'NO' || pregunta === 'nO') {
+    else if (pregunta.toUpperCase() === 'NO') {
         
         let recoMendar = prompt ('Nos recomendaria como asistente medico?') ;
     
-        if (recoMendar === 'Si' || recoMendar === 'si' || recoMendar === 'SI' || recoMendar=== 'sI')
+        if (recoMendar.toUpperCase() === 'SI')
         alert ('Muchas gracias!'); 
     
-        else if (recoMendar === 'No' || recoMendar === 'no' || recoMendar === 'NO' || recoMendar === 'nO') {
+        else if (recoMendar.toUpperCase() === 'NO') {
     
         let mejorAr = prompt ('Comentenos en que podemos mejorar') ;
     
