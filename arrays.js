@@ -24,7 +24,7 @@ for (let i = 9 ; i <= 19; i++) {
     let pregunta = prompt ('Es tu primera vez en nuestra web?');
 
 
-    if (pregunta === 'Si' || 'sI' || 'si' || 'SI') {
+    if (pregunta === 'Si' || 'si' || 'sI' || 'SI') {
         alert ('Bienvenido/a a New Medical!');
     }
 
@@ -36,7 +36,7 @@ for (let i = 9 ; i <= 19; i++) {
         
         let recoMendar = prompt ('Nos recomendaria como asistente medico?') ;
     
-        if (recoMendar === 'Si')
+        if (recoMendar === 'Si' || 'sI' || 'SI' || 'si')
         alert ('Muchas gracias!'); 
     
         else if (recoMendar === 'No' || 'no' || 'nO' || 'NO') {
