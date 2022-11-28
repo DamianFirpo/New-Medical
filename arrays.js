@@ -24,7 +24,7 @@ for (let i = 9 ; i <= 19; i++) {
     let pregunta = prompt ('Es tu primera vez en nuestra web?');
 
 
-    if (pregunta === 'Si') {
+    if (pregunta === 'Si' || 'sI' || 'si' || 'SI') {
         alert ('Bienvenido/a a New Medical!');
     }
 
