@@ -22,7 +22,7 @@
 </head>
     <nav class="navbar">
         <div class="navbar-container container">
-            <input type="checkbox" name="" id="">
+            <input type="checkbox" name="" >
             <div class="hamburger-lines">
                 <span class="line line1"></span>
                 <span class="line line2"></span>
@@ -263,22 +263,23 @@
         </div>
       </section>
       <section id="contacto">
-        <div class="contact-container container">
+        <div class="contact-container container" >
           <div class="contact-img">
             <img src="./img/medicos/contactanos.jpg" alt="Medicos sonriendo" />
           </div>
   
-          <div class="form-container">
+          <form class="form-container" id="formuLario">
             <h2>Contactanos</h2>
-            <input type="text" placeholder="Tu Nombre" />
-            <input type="email" placeholder="E-Mail" />
+            <input type="text" placeholder="Tu Nombre" required id="nomBre" />
+            <input type="email"  placeholder="E-Mail" required id="tuMail"/>
             <textarea
               cols="30"
               rows="6"
               placeholder="Dejanos tu mensaje"
+              id="checkMesagge"
             ></textarea>
-            <a href="#" class="btn btn-primary">Enviar</a>
-          </div>
+            <button class="btn btn-primary" id="submitButton" onclick="submitForm(event)">Enviar<a href="#" required></a></button>
+          </form>
         </div>
       </section>
       <footer class="pie-pagina">
@@ -328,8 +329,8 @@
         } 
       });
     });
-  </script>
-  <script src="./operaciones.js"></script>
+  </script>  
+  <script src="./eventos.js"></script>
   <script src="./arrays.js"></script>
 </html>
 </body>
