@@ -92,4 +92,13 @@ submitButton.addEventListener("click", (e)=>{
     
 })
 
+//RECORRIENDO LOCALSTORAGE CON CICLO FOR
+
+for (let i = 0; i < localStorage.length; i++) {
+  let key = localStorage.key(i);
+  let value = localStorage.getItem(key);
+  console.log(key + ": " + value);
+}
+
+
   

@@ -111,6 +111,7 @@ footer{
 
 body {
   font-family: "Poppins", sans-serif;
+  
 }
 
 /* ///////////..utility classes../////////// */
@@ -412,10 +413,8 @@ body {
   object-position: center;
 }
 
-.docs-menu-item {
-  display: flex;
-  flex: 1 1 600px;
-  justify-content: space-evenly;
+.docs-menu-item {display: flex;
+  flex: 1 1 600px;justify-content: space-evenly;
   margin-bottom: 3rem;
 }
 
@@ -424,7 +423,7 @@ body {
 }
 
 .font-title {
-  font-size: 1.8rem;
+            font-size: 1.8rem;
   font-weight: 400;
   color: #444;
 }
@@ -492,9 +491,9 @@ body {
   background: rgb(226, 226, 226);
 }
 
-#contacto {
+        #contacto {
   padding: 1rem 0;
-  background: rgb(226, 226, 226);
+       background: rgb(226, 226, 226);
 }
 
 .contact-container {
@@ -696,7 +695,7 @@ body {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   html {
     font-size: 65%;
   }
@@ -746,6 +745,7 @@ body {
     font-weight: 500;
   }
 }
+
 
 @media (min-width: 769px) and (max-width: 1200px) {
   .img-container h3 {

@@ -1,5 +1,7 @@
 // INGRESAR NOMBRE
 
+
+
 const nombres = [prompt ('Ingrese su nombre y apellido por favor')]
 
 
@@ -195,6 +197,83 @@ for (let i = 9 ; i <= 19; i++) {
         case 5:
             break;
     }
+
+    //ALMACENANDO LOS DATOS DEL FORMULARIO EN LOCALSTORAGE
+
+    class Contacto {
+        constructor(nombre, email, mensaje) {
+            this.nombre = nombre;
+            this.email = email;
+            this.mensaje = mensaje;
+        }
+
+        adjuntarDatos(){
+            let resultado = this.nombre;
+            let resultado2 = this.email;
+            let resultado3 = this.mensaje;
+            return resultado;
+        }
+    }   
+
+    const solicitanTes = [];
+
+    const contacto1 = new Contacto("Jorge" , "jorge@gmail.com");
+    const contacto2 = new Contacto("Paulina" , "paulina@gmail.com")
+
+    const datosPersonales = document.getElementById("formuLario");   
+
+    function agregarContacto(){
+        const nombre = document.getElementById("nomBre").value;
+        const email = document.getElementById("tuMail").value;
+        const mensaje = document.getElementById ("checkMesagge").value;
+
+        const nuevoContacto = new Contacto (nombre, email, mensaje);
+        solicitanTes.push(nuevoContacto);
+
+        console.log (solicitanTes);
+        datosPersonales.reset();
+        
+    }
+
+    datosPersonales.addEventListener("submit" , (e) => {
+        e.preventDefault();
+        agregarContacto();
+    })
+
+    const form = document.getElementById('submitButton');
+    form.addEventListener('click', procesarFormulario);
+    
+    solicitanTes.push(contacto1);
+    solicitanTes.push(contacto2);
+
+    const solicitantesJSON = JSON.stringify(solicitanTes); 
+    localStorage.setItem("solicitanTes", solicitantesJSON);
+
+    const recuperandoForm = localStorage.getItem("solicitanTes");
+
+    const formObjeto = JSON.parse (recuperandoForm); 
+
+
+    
+
+    function procesarFormulario (nombre, email , mensaje) {
+    
+        const nuevoContacto = new Contacto (nombre, email, mensaje);    
+
+        solicitanTes.push(nuevoContacto);        
+    }
+
+    localStorage.setItem("Persona", JSON.stringify(solicitanTes));
+
+    formuLario.reset();
+
+    const resultado = document.getElementById("infoUsuarios");
+    
+    
+
+
+
+
 
 
 
