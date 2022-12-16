@@ -122,7 +122,7 @@ const mostrarCarrito = () => {
                                 <h5> ${producto.nombre} </h5>
                                 <p> ${producto.precio} </p>
                                 <p> ${producto.cantidad} </p>
-                                <button class= "btn colorBoton" id ="eliminar${producto.id}" >Eliminar producto</button>
+                                <button class= "btn colorBoton" id ="eliminar${producto.id}" >Eliminar</button>
                             </div>
                         </div>`
 
