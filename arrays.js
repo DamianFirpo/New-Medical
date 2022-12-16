@@ -220,7 +220,7 @@ for (let i = 9 ; i <= 19; i++) {
     const contacto1 = new Contacto("Jorge" , "jorge@gmail.com");
     const contacto2 = new Contacto("Paulina" , "paulina@gmail.com")
 
-    const datosPersonales = document.getElementById("formuLario");   
+    const datosPersonales = document.getElementById('submitButton');   
 
     function agregarContacto(){
         const nombre = document.getElementById("nomBre").value;
@@ -235,10 +235,13 @@ for (let i = 9 ; i <= 19; i++) {
         
     }
 
-    datosPersonales.addEventListener("submit" , (e) => {
-        e.preventDefault();
-        agregarContacto();
-    })
+    function procesarFormulario (nombre, email , mensaje) {
+    
+        const nuevoContacto = new Contacto (nombre, email, mensaje);    
+
+        solicitanTes.push(nuevoContacto);        
+    }
+
 
     const form = document.getElementById('submitButton');
     form.addEventListener('click', procesarFormulario);
@@ -253,21 +256,16 @@ for (let i = 9 ; i <= 19; i++) {
 
     const formObjeto = JSON.parse (recuperandoForm); 
 
-
+    datosPersonales.addEventListener("submit" , (e) => {
+        e.preventDefault();
+        agregarContacto();
+        procesarFormulario ();
+    })  
     
-
-    function procesarFormulario (nombre, email , mensaje) {
-    
-        const nuevoContacto = new Contacto (nombre, email, mensaje);    
-
-        solicitanTes.push(nuevoContacto);        
-    }
-
     localStorage.setItem("Persona", JSON.stringify(solicitanTes));
 
     formuLario.reset();
 
-    const resultado = document.getElementById("infoUsuarios");
     
     
 
