@@ -8,6 +8,23 @@
   margin: 0;
 }
 
+button.menu-button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #000;
+  cursor: pointer;
+}
+
+button.menu-button:focus {
+  outline: none;
+}
+
+button.menu-button .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
 footer{
     margin-top: 3em;
 }
@@ -86,7 +103,9 @@ footer{
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 30px;
         padding: 35px 0px;
-    }
+    }   
+
+    
     
 }
 
@@ -199,6 +218,7 @@ body {
   color: #297A9C;
   transition: color 0.3s ease-in-out;
 }
+
 
 .logo {
   order: 1;
@@ -629,6 +649,8 @@ body {
     transition: transform 0.4s ease-in-out;
   }
 
+  
+
   .navbar .menu-items {
     padding-top: 100px;
     background: #fff;
@@ -745,6 +767,8 @@ body {
     font-size: 1.8rem;
     font-weight: 500;
   }
+
+  
 }
 
 
@@ -764,7 +788,79 @@ body {
   .showcase-area {
     height: 50vmax;
   }
+
+  
 }
+
+@media (min-width: 991px) {
+  button.menu-button {
+    display: none;
+  } 
+  
+
+  button.menu-button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  button.menu-button:focus {
+    outline: none;
+  }
+  
+  button.menu-button .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+}
+
+@media (min-width: 992px) {
+  #estudiosInicio{
+    color: black;
+    font-size: 1.2em;
+    margin-left: 1em;
+    margin-top: -.7em;
+    margin-bottom: -2em;
+  }
+  
+}
+
+@media (max-width: 991px){
+  #estudiosInicio{
+    color: white;
+    font-size: 1.2em;
+    margin-left: .5em;
+    margin-top: 2em;
+    margin-bottom: -2em;
+  }
+
+  .navbar-collapse {
+    background-color: #000;
+  }
+
+  .form-control {
+    display: block;
+    width: 100%;
+    margin-top: 0.5em;
+    height: 2.5em;    
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: black;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+}
+
 
 @media (min-width: 1200px){
 
@@ -886,13 +982,6 @@ body {
   text-transform: uppercase;
 }
 
-#estudiosInicio{
-  color: black;
-  font-size: 1.2em;
-  margin-left: 1em;
-  margin-top: 0.1em;
-}
-
 .tituloEstudios{
   display: flex;
   flex-wrap: wrap;
@@ -931,3 +1020,119 @@ body {
 #vaciarCarrito{
   margin-top: 1em;
 }
+
+
+button.menu-button:active {
+  border: none;
+}
+
+@media (max-width: 991px){
+  #estudiosInicio{
+    color: white;
+    font-size: 1.2em;
+    margin-left: 1.1em;
+    margin-top: 2em;
+    margin-bottom: -2em;
+  }
+
+  .navbar-collapse {
+    background-color: #297A9C;
+    margin-top: .9em;    
+  }
+
+  .form-control {
+    display: block;
+    width: 100%;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    height: 2.5em;    
+    padding: 0.375rem 0.75rem;
+    margin-left: 1em;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #297A9C;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-control.me-2::placeholder {
+  color: white;
+  margin-left: -2em;
+}
+}
+
+
+/**FORMULARIO DE INICIO DE SESION **/
+
+
+.login-form {
+  /* Ancla el formulario al centro de la pantalla */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Estilo de fondo y bordes */
+  background-color: #297A9C;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 999;
+  display: none;
+  width: 500px;
+  height: 400px;
+  padding: 5em;
+  
+}
+  /* Estilo de los campos de formulario */
+  input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  /* Estilo de los botones */
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #297A9C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .loginButton{
+    margin-top: 3.5em;
+    color: white;
+  }
+
+  .close-button{
+    margin-top: 1em;
+  }
+
+  .loginEmail{
+    padding: 1em;
+    margin-bottom: 2em;
+    margin-top: -1em;
+  }
+
+  .passwordEmail{
+    padding: 1em;
+  }
+
+
+  /** FORMULARIO 2 **/
+
+
+
+
+  /** FORMULARIO 2 FIN **/
