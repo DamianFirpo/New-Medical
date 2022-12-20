@@ -21,9 +21,29 @@ closeButton.addEventListener('click', function() {
 
 const loginActive = document.querySelector('.loginButton');
 
-// Agrega un manejador de eventos click al botón
+
+
+const loginEmail = document.querySelector('.loginEmail');
+
+
+
 loginActive.addEventListener('click', function() {
-  // Redirige a la nueva URL
-  event.preventDefault();
-  window.location.href = '/sections/login.html';
+event.preventDefault();
+
+  if (loginEmail.value === "alguien@example.com") {
+    alert("Bienvenido!");
+    window.location.href = '/sections/login.html';
+  } else {
+    alert("Datos incorrectos");
+    loginForm.reset();
+  }
 });
+
+
+
+
+
+
+
+
+
