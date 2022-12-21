@@ -26,18 +26,33 @@ const loginActive = document.querySelector('.loginButton');
 const loginEmail = document.querySelector('.loginEmail');
 
 
-
-loginActive.addEventListener('click', function() {
-event.preventDefault();
-
-  if (loginEmail.value === "alguien@example.com") {
-    alert("Bienvenido!");
-    window.location.href = '/sections/login.html';
-  } else {
-    alert("Datos incorrectos");
-    loginForm.reset();
-  }
+loginActive.addEventListener('click', () => {
+if (loginEmail.value === "alguien@example.com") {
+  window.location.href = '/sections/login.html';
+  Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'Bienvenido!',   
+    showConfirmButton: false,
+    timer: 1500    
+  })  
+} else {
+  loginActive.addEventListener ("click" , () => {
+    Swal.fire ({
+      icon: 'error',
+        title: 'Oops...',
+        text: 'Datos de inicio de sesión incorrectos!',        
+        footer: '<a href="" class = "revelaDora" >Ayuda con problemas de inicio de sesión</a>'
+    })  
+  } )
+  loginForm.reset();
+}
 });
+
+
+
+
+
 
 
 

@@ -20,6 +20,7 @@ button.menu-button:focus {
   outline: none;
 }
 
+
 button.menu-button .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
@@ -1178,11 +1179,11 @@ button.menu-button:active {
   /* Estilo de fondo y bordes */
   background-color: #297A9C;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 15px;
   z-index: 999;
   display: none;
-  width: 500px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   padding: 5em;
   
 }
@@ -1279,8 +1280,35 @@ button.menu-button:active {
     .logoI {
       margin-top: -.3em;
     }
-
   }
+
+  .swal2-styled.swal2-confirm {
+    border: 0;
+    border-radius: 0.25em;
+    background: initial;
+    background-color: #297A9C;
+    color: #fff;
+    font-size: 1em;
+}
+
+.swal2-icon.swal2-error {
+  border-color: #297A9C;
+  color: #297A9C;
+}
+
+.swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+  display: block;
+  position: absolute;
+  top: 2.3125em;
+  width: 2.9375em;
+  height: 0.3125em;
+  border-radius: 0.125em;
+  background-color: #297A9C;
+}
+
+a{  
+  color: #297A9C;
+}
 
 
 
