@@ -41,8 +41,9 @@ if (loginEmail.value === "alguien@example.com") {
     Swal.fire ({
       icon: 'error',
         title: 'Oops...',
-        text: 'Datos de inicio de sesión incorrectos!',        
-        footer: '<a href="" class = "revelaDora" >Ayuda con problemas de inicio de sesión</a>'
+        text: 'Datos de inicio de sesión incorrectos!',
+        html: ` <p> Datos de inicio de sesion incorrectos!</p>
+            <a href= "" class="masterSolution" id="solucionMaestra" class="swal12-footer">Problemas con el inicio de sesión?</a>`        
     })  
   } )
   loginForm.reset();
