@@ -1,5 +1,8 @@
 
 
+
+
+
 const tarjeta = document.querySelector('#tarjeta'),
 	btnAbrirFormulario = document.querySelector('#btn-abrir-formulario'),
 	formulario = document.querySelector('#formulario-tarjeta'),
@@ -126,6 +129,25 @@ formulario.inputCCV.addEventListener('keyup', () => {
 
 	ccv.textContent = formulario.inputCCV.value;
 });
+
+const pagarTarjeta = document.getElementById("pagarTarjeta")
+
+pagarTarjeta.addEventListener('click' , () => {
+	event.preventDefault();
+	Swal.fire({
+		title: "Pagaste con éxito",
+		text: "Tu pago fue procesado con éxito. Redireccion automatica en 2 segundos",
+		icon: "success",
+		confirmButtonText: '<i class="fas fa-thumbs-up"></i> <span id="mi-boton">Aceptar</span>',
+		onClose: () => {
+			setTimeout(() => {
+			  location.replace("login.html");
+			}, 2000);
+		  }
+	}); 
+			
+});
+
 
 
 
