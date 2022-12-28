@@ -52,7 +52,15 @@ function submitForm(event) {
     document.getElementById("submitButton").scrollIntoView();
     setTimeout(function() {
     // Si ambas funciones devuelven true, entonces se muestra el mensaje de éxito
-    alert("Formulario enviado exitosamente. Muchas gracias!")
+    Swal.fire({
+      position: 'center',
+      icon: 'success', 
+      title: 'Formulario enviado',
+      text: 'Muchas gracias!',   
+      showConfirmButton: false,
+      timer: 1500    
+    })
+    
   }, 500);
   
   } else {
@@ -99,6 +107,44 @@ for (let i = 0; i < localStorage.length; i++) {
   let value = localStorage.getItem(key);
   console.log(key + ": " + value);
 }
+
+const contratarBoton = document.getElementById ("contractSub");
+
+contratarBoton.addEventListener("click" , (e)=>{
+  e.preventDefault();
+  Swal.fire ( {
+    title: "Debe iniciar sesion para poder contratar",
+    icon: "error",
+    confirmButtonText: "Aceptar",            
+  })
+})
+
+const contratarBoton2 = document.getElementById ("contractSub2");
+
+contratarBoton2.addEventListener("click" , (e)=>{
+  e.preventDefault();
+  Swal.fire ( {
+    title: "Debe iniciar sesion para poder contratar",
+    icon: "error",
+    confirmButtonText: "Aceptar",            
+  })
+})
+
+const contratarBoton3 = document.getElementById ("contractSub3");
+
+contratarBoton3.addEventListener("click" , (e)=>{
+  e.preventDefault();
+  Swal.fire ( {
+    title: "Debe iniciar sesion para poder contratar",
+    icon: "error",
+    confirmButtonText: "Aceptar",            
+  })
+})
+
+
+
+
+
 
 
   

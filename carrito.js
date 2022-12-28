@@ -13,6 +13,8 @@
 
 //////////////////////////////
 
+
+
 class Producto {
     constructor(id, nombre, img) {
         this.id = id;
@@ -65,18 +67,31 @@ const mostrarProductos = () => {
                                 <h5 class = "centrandoTexto"> ${producto.nombre} </h5>                               
                                 <button class= "btn colorBoton" id = "boton${producto.id}" >Autorizar estudio</button>
                             </div>
-                        </div>`
+                        </div>`                        
 
         contenedorProductos.appendChild(card);
 
         //Agregar productos al carrito: 
 
         const boton = document.getElementById(`boton${producto.id}`);
+
+        boton.addEventListener("click", () => {
+            Toastify({
+                text: "Estudio agredado",
+            }).showToast();
+        })
+
+
         boton.addEventListener("click", () => {
             agregarAlCarrito(producto.id)
         })
-    })
+    }) 
 }
+
+
+
+
+
 
 //Función agregar al carrito: 
 
@@ -128,6 +143,19 @@ const mostrarCarrito = () => {
 
         contenedorCarrito.appendChild(card);
 
+        const borrarEstudio = document.getElementById(`eliminar${producto.id}`);
+
+        borrarEstudio.addEventListener("click", () => {
+            Toastify({
+                text: "Estudio eliminado",
+                style:
+                {
+                    background: "rgb(252,69,94)",
+                    
+                }                
+            }).showToast();
+        })
+
         //Eliminar productos del carrito:
 
         const boton = document.getElementById(`eliminar${producto.id}`);
@@ -155,6 +183,19 @@ const eliminarDelCarrito = (id) => {
 
 const vaciarCarrito = document.getElementById("vaciarCarrito");
 
+const vaciarPeticion = document.getElementById("vaciarCarrito");
+
+        vaciarPeticion.addEventListener("click", () => {
+            Toastify({
+                text: "Peticiones eliminadas",
+                style:
+                {
+                    background: "green",
+                    
+                }                
+            }).showToast();
+        })
+
 vaciarCarrito.addEventListener("click", () => {
     eliminarTodoElCarrito();
 })
@@ -167,6 +208,7 @@ const eliminarTodoElCarrito = () => {
     localStorage.clear();
 }
 
+
 //Mostramos mensaje con el total de la compra: 
 
 const total = document.getElementById("total");
@@ -178,5 +220,7 @@ const calcularTotal = () => {
     })
     total.innerHTML = `Total: $${totalCompra}`;
 }
+
+
 
     
