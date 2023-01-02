@@ -1,138 +1,4 @@
-// INGRESAR NOMBRE
 
-
-
-const nombres = [prompt ('Ingrese su nombre y apellido por favor')]
-
-
-function solicitarNombre () {   
-alert ("Bienvenido/a " + "" + nombres)
-return "Bienvenido/a " + "" + nombres;
-}
-
-solicitarNombre();
-
-
-
-//INGRESAR EDAD
-
-
-for (let i = 9 ; i <= 19; i++) {
-        let edades = prompt ('Ingrese su edad por favor');
-        alert (" Horario del turno: " + i + "hs." + " Edad: " + edades + " Nombre: " + nombres );
-        break;
-    }
-
-    let pregunta = prompt ('Es tu primera vez en nuestra web?');
-
-
-    if (pregunta.toUpperCase() === 'SI')  {
-        alert ('Bienvenido/a a New Medical!');
-    }
-
-
-    //PRIMERA VEZ?
-    
-    
-    else if (pregunta.toUpperCase() === 'NO') {
-        
-        let recoMendar = prompt ('Nos recomendaria como asistente medico?') ;
-    
-        if (recoMendar.toUpperCase() === 'SI')
-        alert ('Muchas gracias!'); 
-    
-        else if (recoMendar.toUpperCase() === 'NO') {
-    
-        let mejorAr = prompt ('Comentenos en que podemos mejorar') ;
-    
-        alert ('Gracias por su valoracion')
-        
-        
-        }}
-
-
-    //ARRAY
-
-
-    const clientsData = [
-        {
-        name: 'Marta',
-        from: 'Colombia',
-        age: '29',
-    },
-
-    {
-        name: 'Daniel',
-        from: 'Argentina',
-        age: '32',
-    },
-
-    {
-        name: 'Julieta',
-        from: 'Colombia',
-        age: '29',
-    },
-
-    {
-        name: 'Julian',
-        from: 'Argentina',
-        age: '25',
-    },
-
-    {
-        name: 'Edgardo',
-        from: 'Argentina',
-        age: '53',
-    },
-
-    {
-        name: 'Maria',
-        from: 'Mexico',
-        age: '22',
-    },
-
-    'Maria'
-
-    ]    
-
-    //BUSCANDO A TITO
-
-    //console.log (clientsData.includes ('Maria') )
-
-    // //MOSTRANDO TODOS LOS CLIENTES
-
-    //for (const persons of clientsData)
-    //console.log (clientsData);
-
-    // //REBANADA DE Julieta, Julian y Jorge.
-
-    //const copiaclientsData = [clientsData.slice(2,5)]
-    //console.log (copiaclientsData)
-
-
-
-    class Afiliado {
-        constructor(nombre, apellido, dni, telefono){
-            this.nombre = nombre;
-            this.apellido = apellido;
-            this.dni = dni;
-            this.telefono = telefono;
-        }
-    }
-
-    const AfiliadoJorge = new Afiliado ("Jorge", "Estuzanga", 40789654, 1154786534);
-    const AfiliadoSusana = new Afiliado ("Susana", "Fachi", 20876456, 1131002412);
-    const AfiliadoManuel = new Afiliado ("Manuel", "Marchesi", 40873907, 1131087924);
-    const AfiliadoNerina = new Afiliado ("Nerina", "Cotta", 4098245321, 1178562135);
-
-    const arrayAfiliado = [];
-
-    arrayAfiliado.push(AfiliadoJorge);
-    arrayAfiliado.push(AfiliadoManuel);
-    arrayAfiliado.push(AfiliadoNerina);
-    arrayAfiliado.push(AfiliadoSusana);
-
-    console.log (arrayAfiliado);
 
     function welcome() {
     alert("Bienvenido/a al sistema de registros de New Medical!");    
@@ -197,6 +63,18 @@ for (let i = 9 ; i <= 19; i++) {
         case 5:
             break;
     }
+
+
+
+
+
+
+
+
+
+
+
+    
 
     //ALMACENANDO LOS DATOS DEL FORMULARIO EN LOCALSTORAGE
 

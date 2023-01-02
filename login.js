@@ -1,11 +1,6 @@
 
 
 const loginButton = document.querySelector('.login-button');
-const loginForm = document.querySelector('.login-form');
-
-
-const loginActive = document.querySelector('.loginButton');
-const loginEmail = document.querySelector('.loginEmail');
 
 const passwordAutorizada = "1234"
 const userAutorizado = "alguien@example.com"

@@ -1,17 +1,5 @@
 const submitButton = document.getElementById("submitButton");
 
-// sendForm.addEventListener("click", ()=> {
-// alert ("Formulario de contacto enviado exitosamente!");    
-// console.log ("Formulario enviado!");
-// });
-
-// const sendForm = document.getElementById("sendForm");
-
-// sendForm.onclick = ()=>{
-//     alert ("Formulario de contacto enviado exitosamente");
-//     console.log ("Formulario enviado exitosamente!");
-// };
-
 function validateForm() {
   // Obtener el valor del campo "nomBre"
   var inputField = document.getElementById("nomBre").value;
@@ -68,6 +56,9 @@ function submitForm(event) {
     
   }
 }
+
+
+
 
 class Contactado {
     constructor (nombre, email) {

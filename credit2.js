@@ -2,7 +2,6 @@
 
 
 
-
 const tarjeta = document.querySelector('#tarjeta'),
 	btnAbrirFormulario = document.querySelector('#btn-abrir-formulario'),
 	formulario = document.querySelector('#formulario-tarjeta'),
@@ -141,9 +140,9 @@ pagarTarjeta.addEventListener('click' , () => {
 		confirmButtonText: '<i class="fas fa-thumbs-up"></i> <span id="mi-boton">Aceptar</span>',
 		onClose: () => {
 			setTimeout(() => {
-			  location.replace("login.html");
+location.replace("login.html");
 			}, 2000);
-		  }
+}
 	}); 
 			
 });
