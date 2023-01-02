@@ -1,7 +1,4 @@
 
-
-
-
 const tarjeta = document.querySelector('#tarjeta'),
 	btnAbrirFormulario = document.querySelector('#btn-abrir-formulario'),
 	formulario = document.querySelector('#formulario-tarjeta'),
@@ -133,19 +130,40 @@ const pagarTarjeta = document.getElementById("pagarTarjeta")
 
 pagarTarjeta.addEventListener('click' , () => {
 	event.preventDefault();
-	Swal.fire({
+	const camposRequeridos = formulario.querySelectorAll('[required]');
+
+	// Verifica si todos los campos están llenos
+	let camposValidos = true;
+	camposRequeridos.forEach(campo => {
+if (!campo.value) {
+		camposValidos = false;
+}
+	});
+
+	if (camposValidos) {
+	  // Si todos los campos están llenos, muestra el mensaje de Swal.fire
+Swal.fire({
 		title: "Pagaste con éxito",
-		text: "Tu pago fue procesado con éxito. Redireccion automatica en 2 segundos",
+		text: "Tu pago fue procesado con éxito. Redirección automática en 2 segundos",
 		icon: "success",
 		confirmButtonText: '<i class="fas fa-thumbs-up"></i> <span id="mi-boton">Aceptar</span>',
 		onClose: () => {
-			setTimeout(() => {
+setTimeout(() => {
 location.replace("login.html");
-			}, 2000);
-}
-	}); 
-			
+}, 2000);
+		}
 });
+	} else {
+	  // Si hay algún campo vacío, muestra un mensaje de error
+Swal.fire({
+		title: "Error",
+		text: "Por favor, rellena todos los campos del formulario",
+		icon: "error",
+		confirmButtonText: '<i class="fas fa-thumbs-up"></i> <span id="mi-boton">Aceptar</span>'
+});
+	}
+});
+			
 
 
 
