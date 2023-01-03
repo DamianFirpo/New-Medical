@@ -26,13 +26,14 @@ loginButton.addEventListener("click", () => {
         /**Quiero redigir a otra pagina**/
 
         if (usuario === userAutorizado && password === passwordAutorizada) {
-          window.location.href = "./sections/login.html"; 
+          setTimeout(function() {
+            window.location.href = "./sections/login.html"; 
+          }, 2000);
           console.log ("Sesión iniciada con éxito");
-          alert ("Sesion iniciada con exito!");          
-          
+              
           
           Swal.fire({
-            position: 'top-end',
+            position: 'center',
             icon: 'success', 
             title: 'Bienvenido!',   
             showConfirmButton: false,
