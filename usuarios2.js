@@ -33,6 +33,7 @@ registerButton.addEventListener("click", () => {
               break;
             case "baja-afiliado":
               // Aquí puedes poner el código que quieres ejecutar cuando el usuario seleccione esta opción
+              window.location.replace("bajaAfiliado.html");
               break;
             case "busqueda-afiliado":
               // Aquí puedes poner el código que quieres ejecutar cuando el usuario seleccione esta opción
@@ -47,5 +48,5 @@ registerButton.addEventListener("click", () => {
 
 
 
-   
+
 
