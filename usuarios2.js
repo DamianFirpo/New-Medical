@@ -31,12 +31,11 @@ registerButton.addEventListener("click", () => {
             case "modificar-afiliado":
               window.location.replace("modificarAfiliado.html");
               break;
-            case "baja-afiliado":
-              // Aquí puedes poner el código que quieres ejecutar cuando el usuario seleccione esta opción
+            case "baja-afiliado":             
               window.location.replace("bajaAfiliado.html");
               break;
-            case "busqueda-afiliado":
-              // Aquí puedes poner el código que quieres ejecutar cuando el usuario seleccione esta opción
+            case "busqueda-afiliado":             
+              window.location.replace("busquedaAfiliado.html");
               break;
             default:
               // El usuario ha seleccionado una opción inválida

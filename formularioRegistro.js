@@ -1,12 +1,12 @@
-const nombres = document.getElementById("nombres");
+const usuario = document.getElementById("nombres");
 const apellidos = document.getElementById("apellidos");
-const correo = document.getElementById("correo");
+const email = document.getElementById("correo");
 const dni = document.getElementById("dni");
-const telefono = document.getElementById("telefono");
+const celular = document.getElementById("telefono");
 
 const registrarAfiliado = document.getElementById("registroDeafiliados");
 registrarAfiliado.addEventListener("click", () => {
-  if (nombres.value === "" || apellidos.value === "" || correo.value === "" || dni.value === "" || telefono.value === "") {
+  if (usuario.value === "" || apellidos.value === "" || email.value === "" || dni.value === "" || celular.value === "") {
     Swal.fire({
       title: "Por favor, rellena todos los campos",
       icon: "warning"
@@ -19,11 +19,11 @@ registrarAfiliado.addEventListener("click", () => {
       afiliadosRegistrados = JSON.parse(localStorage.getItem("afiliadosRegistrados"));
     }
     afiliadosRegistrados.push({
-      nombres: nombres.value,
+      usuario: usuario.value,
       apellidos: apellidos.value,
-      correo: correo.value,
+      email: email.value,
       dni: dni.value,
-      telefono: telefono.value
+      celular: celular.value
     });
     localStorage.setItem("afiliadosRegistrados", JSON.stringify(afiliadosRegistrados));
     Swal.fire({
